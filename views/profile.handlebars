@@ -1,0 +1,43 @@
+<div class="">
+    <div class="">
+        <h2>Hello, {{first_name}}!</h2>
+    </div>
+</div>
+
+<div class="">
+    <div class="">
+        <h3>Create a new Blog Post!</h3>
+        <form class="form new-blog-post-form">
+            <div class="">
+                <label for="blog-title">Blog Post Title:</label>
+                <input class="form-input" type="text" id="blog-title" name="blog-title">
+            </div>
+            <div class="">
+                <label for="blog-content">Blog Post Content:</label>
+                <input clsas="form-input" type="text" id="blog-content" name="blog-content">
+            </div>
+            <div class="">
+                <button type="submit" class="btn">Create!</button>
+            </div>
+        </form>
+    </div>
+
+    {{#if blogPosts.length}}
+    <div class="blog-post-list">
+        <h3>Your Blog Posts:</h3>
+
+        {{#each blogPosts as |post|}}
+        <div class="">
+            <div class="">
+                <h4><a href="/blogpost/{{post.id}}">{{post.blog_title}}</a></h4>
+            </div>
+            <div class="">
+                <button class="btn" data-id="{{post.id}}">Delete Blog Post</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
