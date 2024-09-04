@@ -52,3 +52,23 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
+
+document
+    .getElementById('signup-btn')
+    .addEventListener('click', () => {
+        const signup = document.getElementById('signup')
+        signup.setAttribute('style', 'display: block;')
+
+        const login = document.getElementById('login');
+        login.setAttribute('style', 'display: none;')
+    });
+
+document
+    .getElementById('login-btn')
+    .addEventListener('click', () => {
+        const signup = document.getElementById('signup')
+        signup.setAttribute('style', 'display: none;')
+
+        const login = document.getElementById('login');
+        login.setAttribute('style', 'display: block;')
+    })

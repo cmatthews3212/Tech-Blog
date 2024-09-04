@@ -1,0 +1,19 @@
+header {
+
+}
+
+#signup {
+    display: none;
+}
+#login {
+    display: block;
+}
+
+#signup-btn:hover {
+    cursor: pointer;
+}
+
+#login-btn:hover {
+    cursor: pointer;
+}
+
