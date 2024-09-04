@@ -53,6 +53,8 @@ router.get('/profile', withAuth, async (req, res) => {
             include: [{ model: BlogPost }],
         });
 
+        console.log(userData)
+
         const user = userData.get({ plain: true });
 
         res.render('profile', {
