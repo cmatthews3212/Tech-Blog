@@ -79,6 +79,13 @@ header {
 
 .acc-container span:hover {
     text-decoration: underline;
+    color: #e25282;
+}
+
+.acc-container form input {
+    border: solid 2px 	#e25282;
+    border-radius: 3px;
+    height: 20px;
 }
 
 
