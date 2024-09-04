@@ -2,6 +2,15 @@ a {
     text-decoration: none;
     color: black;
 }
+
+#logo-text:hover {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: 	#ffc0c0;
+}
+
 #signup {
     display: none;
 }
