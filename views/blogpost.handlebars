@@ -1,5 +1,8 @@
-<div class="">
+<div id="blog-container" class="blopost-cont">
+    <div class="blog-cont">
     <h2>{{blog_title}}</h2>
-    <p>{{blog_content}}</p>
-    <p>Created by: {{user.first_name}} {{user.last_name}}</p>
+    <p class="author">{{user.first_name}} {{user.last_name}}</p>
+    <p class="content">{{blog_content}}</p>
+    </div>
+    <p class="date">{{format_date date_created}}</p>
 </div>

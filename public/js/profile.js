@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
 
   
     if (blogTitle && blogContent ) {
-      const response = await fetch(`/api/blogposts`, {
+      const response = await fetch(`/api/blogPosts`, {
         method: 'POST',
         body: JSON.stringify({ blogTitle, blogContent }),
         headers: {
@@ -18,6 +18,7 @@ const newFormHandler = async (event) => {
         document.location.replace('/profile');
       } else {
         alert('Failed to create project');
+        console.log(response)
       }
     }
   };

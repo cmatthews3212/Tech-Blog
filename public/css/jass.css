@@ -98,6 +98,40 @@ nav a {
     height: 20px;
 }
 
+/* BlogPost */
+
+#blog-container {
+    background-color: #ffc0c0;
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+}
+
+#blog-container h2 {
+    font-size: 30px;
+}
+
+#blog-container .date, .author  {
+    background-color: #e25282;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+}
+
+#blog-container .date {
+    height: 20px;
+}
+
+#blog-container .author {
+    width: 25%;
+   
+}
+
+#blog-container .content {
+    font-size: 20px;
+}
+
 
 
 
