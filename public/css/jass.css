@@ -185,5 +185,53 @@ nav a {
     color: black;
 }
 
+/* Profile */
+.profile-content {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.new-blog-form {
+    background-color: #ffc0c0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.new-blog-form form div {
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.new-blog-form form button {
+    background-color:	#e25282;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.new-blog-form form button:hover {
+    cursor: pointer;
+    background-color:#d68787;
+}
+
+
+
+.new-blog-form span:hover {
+    text-decoration: underline;
+    color: #e25282;
+}
+
+.new-blog-form form input {
+    border: solid 2px 	#e25282;
+    border-radius: 3px;
+    height: 20px;
+}
+
+
 
 
