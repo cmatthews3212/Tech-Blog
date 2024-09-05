@@ -186,6 +186,11 @@ nav a {
 }
 
 /* Profile */
+.welcome {
+    font-size: 50px;
+    text-align: center;
+}
+
 .profile-content {
     display: flex;
     justify-content: space-around;
@@ -199,11 +204,20 @@ nav a {
     border-radius: 10px;
 }
 
+.new-blog-form h3 {
+    font-size: 30px;
+}
+
 .new-blog-form form div {
     margin-bottom: 20px;
     font-size: 20px;
-    width: 100px;
+    width: 500px;
     position: relative;
+
+}
+
+.new-blog-form form .title {
+    width: 200px;
 }
 
 .new-blog-form form button {
@@ -221,16 +235,63 @@ nav a {
 
 
 
-.new-blog-form span:hover {
-    text-decoration: underline;
-    color: #e25282;
-}
-
-.new-blog-form form input {
+.new-blog-form form input, textarea {
     border: solid 2px 	#e25282;
     border-radius: 3px;
     height: 20px;
 }
+
+.new-blog-form div #blog-content {
+    height: 500px;
+    width: 500px;
+}
+
+
+.blog-post-list {
+    background-color: #ffc0c0;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.blog-post-list .posts {
+    background-color: #d68787;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.blog-post-list h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.blog-post-list .posts h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.blog-post-list .posts button {
+    background-color:	#e25282;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.blog-post-list .posts button:hover {
+    background-color: #ffc0c0;
+    cursor: pointer;
+}
+
+
 
 
 
