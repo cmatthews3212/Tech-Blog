@@ -1,21 +1,31 @@
 {{#each blogPosts as |post| }}
     {{#if @last}}
-    <div class="latest-blog blogs" id="{{post.id}}">
+    <div class="latest-blog  blogs" id="{{post.id}}">
+        <div class="featured">
+        <h2 id="ftBlg">Featured Blog!</h2>
+        <h2>{{post.blog_title}}</h2>
+        <p class="author">{{user.first_name}} {{user.last_name}}</p>
+        <p>{{post.blog_content}}</p>
+        <p class="date">{{format_date post.date_created}}</p>
+        </div>
+        
+    </div>
+  
+    
+   {{else}}
+    <div class="blogs blogs-list" id="{{post.id}}">
         <div class="blogs-info">
-        <h2>{{this.blog_title}}</h2>
-
+            <h2>
+                <a class="blogId" href="/blogpost/{{post.id}}">{{post.blog_title}}</a>
+            </h2>
+            <p>{{user.first_name}} {{user.last_name}}</p>
         </div>
     </div>
-    {{else}}
-<div class="blogs" id="{{post.id}}">
-    <div class="blogs-info">
-        <h2>
-            <a class="blogId" href="/blogpost/{{post.id}}">{{post.blog_title}}</a>
-        </h2>
-        <p>{{user.first_name}} {{user.last_name}}</p>
-    </div>
+
     {{/if}}
-</div>
+
+
+
 {{/each}}
 
 
