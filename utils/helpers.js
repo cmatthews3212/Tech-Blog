@@ -3,6 +3,13 @@ module.exports = {
       // Format date as MM/DD/YYYY
       return date.toLocaleDateString();
     },
+
+    todays_date: (today) => {
+        today = new Date;
+            return today
+
+    },
+
     format_amount: (amount) => {
       // format large numbers with commas
       return parseInt(amount).toLocaleString();
@@ -19,4 +26,6 @@ module.exports = {
         return `<span for="img" aria-label="gear">⚙️</span>`;
       }
     },
-  };
+};
+
+

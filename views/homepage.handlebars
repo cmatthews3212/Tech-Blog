@@ -1,10 +1,22 @@
 {{#each blogPosts as |post| }}
-<div class="">
-    <div class="">
-        <h2>
-            <a href="/blogpost/{{post.id}}">{{post.blog_title}}</a>
-        </h2>
-        
+    {{#if @last}}
+    <div class="latest-blog blogs" id="{{post.id}}">
+        <div class="blogs-info">
+        <h2>{{this.blog_title}}</h2>
+
+        </div>
     </div>
+    {{else}}
+<div class="blogs" id="{{post.id}}">
+    <div class="blogs-info">
+        <h2>
+            <a class="blogId" href="/blogpost/{{post.id}}">{{post.blog_title}}</a>
+        </h2>
+        <p>{{user.first_name}} {{user.last_name}}</p>
+    </div>
+    {{/if}}
 </div>
 {{/each}}
+
+
+<script src="./js/homepage.js"></script>

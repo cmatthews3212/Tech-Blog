@@ -133,7 +133,27 @@ nav a {
 }
 
 
+/* Homepage */
 
+.blogs {
+    background-color: #ffc0c0;
+    width: 15%;
+    margin: 0 auto;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.blogs:hover {
+    cursor: pointer;
+    background-color: #d68787;
+}
+
+.blogs .blogs-info h2 a:hover {
+    color: black;
+}
 
 
 
