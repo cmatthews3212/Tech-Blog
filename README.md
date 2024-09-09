@@ -42,4 +42,6 @@ N/A
 https://tech-blog-gmoy.onrender.com/login
 
 ## Screenshots
-
+<img src="./develop/public/assets/techblog1.png">
+<img src="./develop/public/assets/techblog2.png">
+<img src="./develop/public/assets/techblog3.png">
