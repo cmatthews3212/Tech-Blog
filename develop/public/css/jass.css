@@ -294,6 +294,69 @@ nav a {
     cursor: pointer;
 }
 
+/* Blogpost Page */
+#comment-section {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+#comment-section div {
+    margin: 20px;
+}
+
+#comment-section .comment-form form {
+   display: flex;
+   flex-direction: column;
+   
+}
+
+#comment-section .comment-form form .my-comment {
+   display: flex;
+   flex-direction: column;
+
+ }
+
+#comment-section .comment-form form .my-comment textarea {
+    width: 400px;
+    height: 100px;
+
+ }
+
+ #comment-section .comment-form form div button {
+   background-color: #e25282;
+   border: none;
+   color: white;
+   padding: 10px;
+   border-radius: 5px;
+ }
+
+ #comment-section .comment-form form div button:hover {
+    cursor: pointer;
+    background-color: #d68787;
+  }
+
+
+ #comment-section .comments-posted {
+    border: solid 5px #e25282;
+    border-radius: 10px;
+    height: auto;
+ }
+
+ #comment-section .comments-posted p {
+    border-bottom: solid 2px #d68787;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+ }
+
+
+
+
+
 
 
 
