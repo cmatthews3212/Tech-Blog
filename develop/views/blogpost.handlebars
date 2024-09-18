@@ -19,6 +19,10 @@
             </div>
         </form>
     </div>
+    {{else}}
+    <div class="login-message">
+        <p>Please login to post a comment!</p>
+    </div>
     {{/if}}
     <div class="comments-posted">
         {{#each comments as |comment| }}
