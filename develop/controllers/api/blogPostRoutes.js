@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { BlogPost, Comment } = require('../../models');
+const { findCreateFind } = require('../../models/BlogPost');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -15,6 +16,35 @@ router.post('/', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+// router.get('/:id', async (req, res) => {
+//     try {
+//         const blogPost = await BlogPost.findByPk(req.params.id, {
+//             include: [{ model: Comment }],
+//         });
+
+//         // const comments = await Comment.findAll({
+//         //     where: {
+//         //         blogpost_id: req.params.id,
+//         //     },
+//         // });
+
+//         if (!blogPost) {
+//             return res.status(404).json({ message: 'blog post not found' });
+//         }
+
+//         // console.log(blogPost)
+//         // console.log(comments)
+        
+//         // res.render('blogpost', {
+//         //     comments,
+//         // })
+//         res.status(200).json(blogPost, comments)
+//     } catch (err) {
+//         console.log(err) 
+//         res.status(500).json(err)
+//     }
+// })
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
@@ -36,19 +66,27 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
+
+
 router.post('/:id', withAuth, async (req, res) => {
-    console.log(req.body)
     try {
         const newComment = await Comment.create({
-            ...req.body,
-            user_id: req.session.user_id,
-            
-        });
-        res.status(200).json(newComment);
-    } catch (err) {
-        res.status(400).json(err);
-    }
+            comment_content: req.body.comment_content,
+            blogpost_id: req.params.id,
+            user_id: req.session.user_id
+        })
 
-})
+        console.log(newComment)
+
+        res.status(201).json(newComment)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+});
+
+
+
+
 
 module.exports = router;

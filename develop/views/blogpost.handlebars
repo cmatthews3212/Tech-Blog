@@ -1,4 +1,4 @@
-<div id="blog-container" class="blopost-cont">
+<div data-id="{{id}}" id="blog-container" class="blopost-cont">
     <div class="blog-cont">
     <h2>{{blog_title}}</h2>
     <p class="author">{{user.first_name}} {{user.last_name}}</p>
@@ -7,6 +7,7 @@
     <p class="date">{{format_date date_created}}</p>
 </div>
 <div id="comment-section">
+    {{#if logged_in}}
     <div class="comment-form">
         <form>
             <div class="my-comment">
@@ -18,11 +19,13 @@
             </div>
         </form>
     </div>
+    {{/if}}
     <div class="comments-posted">
-        <p class="comment">Test Comment</p>
-        <p class="comment">Test Comment</p>
-        <p class="comment">Test Comment</p>
+        {{#each comments as |comment| }}
+        <p class="comment">{{comment.dataValues.comment_content}}</p>
+        {{/each}}
     </div>
 </div>
+
 
 <script src="./js/comment.js"></script>
